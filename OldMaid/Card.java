@@ -1,8 +1,8 @@
 public class Card
 {
 	//カードの数字、スートを格納
-	private int number;
-	private int suit;
+	public int number;
+	public int suit;
 
 	//カード生成のための変数
 	public static int JOKER = 0;

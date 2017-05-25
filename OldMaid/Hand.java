@@ -28,6 +28,7 @@ public class Hand
 	public void searchCard(){
 		//手札の枚数を取得
 		cardNumber = cardList.size();
+		int cardNumber = cardList.size();
 		int lastListNumber = cardNumber - 1;
 		//リストの最後のカード情報を取得
 		Card lastCard = cardList.get(lastListNumber);
