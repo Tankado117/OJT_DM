@@ -6,13 +6,29 @@ public  class Master{
 	private void registerPlayer(Player player){
 		nameList.add(player);
 	}
+
+	//ゲームの準備をする
 	private prepareGame(Hand trump){
+		int flg = 0;
 		trump.shuffleCard();
-		for(int i = 0; i < trump.length; i++){
+
+		//カードを配る
+		for(int i = 0; i <= trump.length; i++){
 			Card card = trump.drawCard;
-			nameList.get(i).sendCard(card);
+			
+			//配り先の切り替えをしつつ配る
+			if(flg < 3){
+				nameList.get(flg).distributeCard(card);
+				flg = flg + 1;
+			}
+			else{
+				flg = 0;
+				nameList.get(flg).distributeCard(card);
+				flg = flg + 1;
+			}
 		}
 	}
+
 	private startGame(){
 		
 		
