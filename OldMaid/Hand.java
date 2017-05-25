@@ -2,9 +2,10 @@ import java.util.*;
 
 public class Hand
 {
-	public int cardNumber;
+	public int cardNumber; 
 	public  List<Card> cardList = new ArrayList<Card>();
 	Table table = new Table();
+	Card card = new Card();
 	
 	//カードを加える
 	public void addCard(Card card){
@@ -18,25 +19,29 @@ public class Hand
 
 	//同じ数のカードを探す
 	public void searchCard(){
-		int lastListNumber = cardList.size(); 
-		Card lastCard = cardList.get(lastListNumber); //直前に追加したカード
-		int lastCardNumber = lastCard.number; //直前に追加したカードの数字
-		int serchCardNumber = cardList.number.indexOf(lastCardNumber);
+		//手札の枚数を取得
+		int cardNumber = cardList.size();
+		int lastListNumber = cardNumber - 1;
+		//リストの最後のカード情報を取得
+		Card lastCard = cardList.get(lastListNumber);
+		//リストの最後のカードの数字情報を取得
+		int lastCardNumber = card.showNumber(lastCard);
 
-		if(serchCardNumber != -1){
-			Card dumpCard1 = cardList.get(serchCardNumber);
-			Card dumpCard2 = cardList.get(lastCardNumber);
+		//同じ数字のものを探す
+		for(int serchListNumber=0; serchListNumber<lastListNumber; serchListNumber++){
+			Card serchCard = cardList.get(serchListNumber);
+			int serchCardNumber = card.showNumber(serchCard);
 
-			table.dump(dumpCard1, dumpCard2, serchCardNumber, lastListNumber, cardList);
+			//同じ数字があった時
+			if(serchCardNumber == lastCardNumber){
+				table.dump(serchCard, lastCard, serchListNumber, lastListNumber, cardList);
+			}
 		}
-
-
-
 	}
 
 	//シャッフルする
 	public void shuffleCard(){
-	
+		Collections.shuffle(cardList);	
 	}
 
 	//枚数を数える

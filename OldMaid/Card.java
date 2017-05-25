@@ -17,7 +17,7 @@ public class Card
 	}
 	
 	//”š‚ğŒ©‚é
-	public int showNumber(){
+	public int showNumber(Card card){
 		return this.number;	
 	}
 }
