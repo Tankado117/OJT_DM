@@ -13,8 +13,15 @@ public class Hand
 	}
 
 	//カードを引く
-	public void drawCard(){
-	
+	public Card drawCard(Hand hand){
+		
+    	int cardNumber = hand.cardNumber; //カードの枚数
+    	int random = nextInt(cardNumber-1);
+		
+		Card pullCard = hand.get(random);
+    	hand.remove[random];//カード一枚引かれる
+		
+		return pullCard;
 	}
 
 	//同じ数のカードを探す
