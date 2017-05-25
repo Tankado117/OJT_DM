@@ -1,21 +1,22 @@
-public  class Master
-{
-	//あがりを宣言する
-	public void registerPlayer(){
-		
+public  class Master{
+	
+	private List<Player> nameList = new ArrayList<Player>();
+	
+	//参加プレイヤーを登録するメソッド
+	private void registerPlayer(Player player){
+		nameList.add(player);
 	}
-
-	//ゲームを準備する
-	private prepareGame(){
-		
+	private prepareGame(Hand trump){
+		trump.shuffleCard();
+		for(int i = 0; i < trump.length; i++){
+			Card card = trump.drawCard;
+			nameList.get(i).sendCard(card);
+		}
 	}
-
-	//ゲームを開始する
 	private startGame(){
 		
+		
 	}
-
-	//ゲームを終了する
 	private endGame(){
 		
 	}
