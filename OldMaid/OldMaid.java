@@ -5,7 +5,7 @@ public class OldMaid
 {
     public static void main(String args[])
     {
-/*        // 進行役の生成
+        // 進行役の生成
         Master master = new Master();
         
         // 場の生成
@@ -28,8 +28,7 @@ public class OldMaid
         master.prepareGame(trump);
         
         // ゲームを開始する
-        master.startGame();
-*/        
+        master.startGame();       
     }
     
     /*

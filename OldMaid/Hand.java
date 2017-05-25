@@ -6,7 +6,7 @@ public class Hand
 	public void addCard(Card card){
 		System.out.println(card);		
 	}
-/*
+
 	//ƒJ[ƒh‚ğˆø‚­
 	public void drawCard(){
 	
@@ -26,5 +26,4 @@ public class Hand
 	public void countCard(){
 	
 	}
-*/
 }
