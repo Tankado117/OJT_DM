@@ -30,10 +30,11 @@ public  class Master{
 		}
 	}
 
+	//ゲームを開始する
 	private startGame(){
 		player.nominamte(nameList);
 		
-	}
+	}//ゲームを終了する
 	private endGame(){
 		
 	}

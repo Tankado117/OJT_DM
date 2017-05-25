@@ -20,7 +20,7 @@ public class Hand
 	//同じ数のカードを探す
 	public void searchCard(){
 		//手札の枚数を取得
-		int cardNumber = cardList.size();
+		cardNumber = cardList.size();
 		int lastListNumber = cardNumber - 1;
 		//リストの最後のカード情報を取得
 		Card lastCard = cardList.get(lastListNumber);
@@ -45,7 +45,8 @@ public class Hand
 	}
 
 	//枚数を数える
-	public void countCard(){
-	
+	public int countCard(List<Card> cardList){
+		cardNumber = cardList.size();
+		return cardNumber;
 	}
 }

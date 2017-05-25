@@ -1,7 +1,7 @@
 public class Player
 {
     String name;
-    Hand hand = new.Hand();
+    Hand hand = new Hand();
 
     //カードを配る
     public void distributeCard(Card card){
