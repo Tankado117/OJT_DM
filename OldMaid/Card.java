@@ -11,7 +11,7 @@ public class Card
 	public static int SUIT_HEART = 3;
 	public static int SUIT_SPADE = 4;
 
-	public Card(int suit, int number){
+	public void Card(int suit, int number){
 		this.suit = suit;
 		this.number = number;
 	}
