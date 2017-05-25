@@ -1,5 +1,6 @@
 public  class Master{
 	
+	Player player = new Player();
 	private List<Player> nameList = new ArrayList<Player>();
 	
 	//参加プレイヤーを登録するメソッド
@@ -30,7 +31,7 @@ public  class Master{
 	}
 
 	private startGame(){
-		
+		player.nominamte(nameList);
 		
 	}
 	private endGame(){
