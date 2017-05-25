@@ -6,7 +6,7 @@ public class Player
     //カードを配る
     public void distributeCard(Card card){
         hand.addCard(card);
-        hand.searchCard(card);
+        hand.searchCard();
     }
 
     //順番を指名する

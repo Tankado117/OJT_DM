@@ -17,7 +17,7 @@ public class Hand
 	}
 
 	//同じ数のカードを探す
-	public void searchCard(Card card){
+	public void searchCard(){
 		int lastListNumber = cardList.size(); 
 		Card lastCard = cardList.get(lastListNumber); //直前に追加したカード
 		int lastCardNumber = lastCard.number; //直前に追加したカードの数字
